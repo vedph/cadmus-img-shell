@@ -2,6 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@myrmidon/cadmus-part-img-gallery-image-annotations": [
+        "dist/myrmidon/cadmus-part-img-gallery-image-annotations"
+      ],
+      "@myrmidon/cadmus-part-img-pg": [
+        "dist/myrmidon/cadmus-part-img-pg"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

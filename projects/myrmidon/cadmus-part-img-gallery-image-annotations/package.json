@@ -1,0 +1,24 @@
+{
+  "name": "@myrmidon/cadmus-part-img-gallery-image-annotations",
+  "version": "0.0.1",
+  "description": "Cadmus - image gallery annotations parts.",
+  "keywords": [
+    "Cadmus"
+  ],
+  "homepage": "https://github.com/vedph/cadmus-img-shell",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vedph/cadmus-img-shell"
+  },
+  "author": {
+    "name": "Daniele Fusi"
+  },
+  "peerDependencies": {
+    "@angular/common": "^15.2.0",
+    "@angular/core": "^15.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
