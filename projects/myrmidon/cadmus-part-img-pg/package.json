@@ -1,9 +1,22 @@
 {
   "name": "@myrmidon/cadmus-part-img-pg",
   "version": "0.0.1",
+  "description": "Cadmus - image gallery editor wrappers.",
+  "keywords": [
+    "Cadmus"
+  ],
+  "homepage": "https://github.com/vedph/cadmus-img-shell",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vedph/cadmus-img-shell"
+  },
+  "author": {
+    "name": "Daniele Fusi"
+  },
   "peerDependencies": {
     "@angular/common": "^15.2.0",
-    "@angular/core": "^15.2.0"
+    "@angular/core": "^15.2.0",
+    "@myrmidon/cadmus-part-img-gallery-image-annotations": "^0.0.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"
