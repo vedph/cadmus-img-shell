@@ -14,7 +14,6 @@ import {
   EXTERNAL_IDS_PART_TYPEID,
   PIN_LINKS_PART_TYPEID,
   PIN_LINKS_FRAGMENT_TYPEID,
-  GALLERY_IMAGE_ANNOTATIONS_PART_TYPEID,
   CHRONOLOGY_FRAGMENT_TYPEID,
   COMMENT_FRAGMENT_TYPEID,
 } from '@myrmidon/cadmus-part-general-ui';
@@ -23,6 +22,8 @@ import {
   ORTHOGRAPHY_FRAGMENT_TYPEID,
 } from '@myrmidon/cadmus-part-philology-ui';
 import { PartEditorKeys } from '@myrmidon/cadmus-core';
+
+import { GALLERY_IMAGE_ANNOTATIONS_PART_TYPEID } from 'projects/myrmidon/cadmus-part-img-gallery-image-annotations/src/public-api';
 
 const GENERAL = 'general';
 const PHILOLOGY = 'philology';
