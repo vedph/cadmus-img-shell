@@ -1,6 +1,6 @@
 {
   "name": "@myrmidon/cadmus-part-img-gallery-image-annotations",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Cadmus - image gallery annotations parts.",
   "keywords": [
     "Cadmus"
@@ -14,13 +14,13 @@
     "name": "Daniele Fusi"
   },
   "peerDependencies": {
-    "@angular/common": "^15.2.0",
-    "@angular/core": "^15.2.0",
-    "@myrmidon/cadmus-img-annotator": "^1.0.0",
-    "@myrmidon/cadmus-img-gallery": "^0.0.1"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@myrmidon/cadmus-img-annotator": "^2.0.0",
+    "@myrmidon/cadmus-img-gallery": "^2.0.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.5.0"
   },
   "sideEffects": false
 }

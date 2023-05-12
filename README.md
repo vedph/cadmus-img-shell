@@ -6,5 +6,6 @@ Cadmus imaging components shell. This was derived from Cadmus shell, by moving h
 
 ## History
 
+- 2023-05-12: updated to Angular 16.
 - 2023-04-15: updated packages (custom actions in gallery).
 - 2023-04-14: updated Angular and packages.
