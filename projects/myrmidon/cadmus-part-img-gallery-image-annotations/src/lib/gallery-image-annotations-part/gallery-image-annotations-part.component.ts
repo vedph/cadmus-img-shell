@@ -5,25 +5,25 @@ import {
   FormGroup,
   UntypedFormGroup,
 } from '@angular/forms';
+import { take } from 'rxjs';
 
 import { NgToolsValidators } from '@myrmidon/ng-tools';
 import { AuthJwtService } from '@myrmidon/auth-jwt-login';
 import { EditedObject, ModelEditorComponentBase } from '@myrmidon/cadmus-ui';
 import { ThesauriSet, ThesaurusEntry } from '@myrmidon/cadmus-core';
 import {
-  GalleryImage,
   GalleryImageAnnotation,
   GalleryOptions,
   GalleryService,
   IMAGE_GALLERY_OPTIONS_KEY,
   IMAGE_GALLERY_SERVICE_KEY,
 } from '@myrmidon/cadmus-img-gallery';
+import { GalleryImage } from '@myrmidon/cadmus-img-annotator';
 
 import {
   GalleryImageAnnotationsPart,
   GALLERY_IMAGE_ANNOTATIONS_PART_TYPEID,
 } from '../gallery-image-annotations-part';
-import { take } from 'rxjs';
 
 /**
  * GalleryImageAnnotationsPart editor component.

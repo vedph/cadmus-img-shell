@@ -38,10 +38,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
-// vendor
-import { devTools } from '@ngneat/elf-devtools';
-import { Actions } from '@ngneat/effects-ng';
-
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -89,16 +85,6 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { PART_EDITOR_KEYS } from './part-editor-keys';
 import { INDEX_LOOKUP_DEFINITIONS } from './index-lookup-definitions';
 import { ITEM_BROWSER_KEYS } from './item-browser-keys';
-
-// https://ngneat.github.io/elf/docs/dev-tools/
-export function initElfDevTools(actions: Actions) {
-  return () => {
-    devTools({
-      name: 'Sample Application',
-      actionsDispatcher: actions,
-    });
-  };
-}
 
 @NgModule({
   declarations: [
@@ -203,13 +189,6 @@ export function initElfDevTools(actions: Actions) {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthJwtInterceptor,
       multi: true,
-    },
-    // ELF dev tools
-    {
-      provide: APP_INITIALIZER,
-      multi: true,
-      useFactory: initElfDevTools,
-      deps: [Actions],
     },
     // image gallery
     {
