@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -38,8 +38,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
-import { MonacoEditorModule } from 'ngx-monaco-editor';
-import { MarkdownModule } from 'ngx-markdown';
+// vendor
+import { NgeMonacoModule } from '@cisstech/nge/monaco';
+import { NgeMarkdownModule } from '@cisstech/nge/markdown';
 
 // myrmidon
 import { EnvServiceProvider, NgToolsModule } from '@myrmidon/ng-tools';
@@ -51,18 +52,20 @@ import {
 import { AuthJwtAdminModule } from '@myrmidon/auth-jwt-admin';
 
 // cadmus bricks
-import { CadmusRefsDocReferencesModule } from '@myrmidon/cadmus-refs-doc-references';
-import { CadmusRefsHistoricalDateModule } from '@myrmidon/cadmus-refs-historical-date';
-import { CadmusRefsAssertedIdsModule } from '@myrmidon/cadmus-refs-asserted-ids';
-import { CadmusRefsLookupModule } from '@myrmidon/cadmus-refs-lookup';
-import { CadmusTextBlockViewModule } from '@myrmidon/cadmus-text-block-view';
+import { DocReferencesComponent } from '@myrmidon/cadmus-refs-doc-references';
+import { HistoricalDateComponent } from '@myrmidon/cadmus-refs-historical-date';
+import { AssertedIdsComponent } from '@myrmidon/cadmus-refs-asserted-ids';
+import { RefLookupComponent } from '@myrmidon/cadmus-refs-lookup';
+import { TextBlockViewComponent } from '@myrmidon/cadmus-text-block-view';
 import {
-  CadmusImgGalleryModule,
+  GalleryFilterComponent,
+  GalleryImgAnnotatorComponent,
+  GalleryListComponent,
   IMAGE_GALLERY_OPTIONS_KEY,
   IMAGE_GALLERY_SERVICE_KEY,
   MockGalleryService,
 } from '@myrmidon/cadmus-img-gallery';
-import { CadmusImgAnnotatorModule } from '@myrmidon/cadmus-img-annotator';
+import { ImgAnnotatorDirective } from '@myrmidon/cadmus-img-annotator';
 
 // libraries in this workspace
 // notice that when you import the libraries into another workspace, you must change
@@ -137,23 +140,25 @@ import { ITEM_BROWSER_KEYS } from './item-browser-keys';
     MatTreeModule,
     ClipboardModule,
     // vendor
-    MonacoEditorModule.forRoot(),
-    MarkdownModule.forRoot(),
+    NgeMonacoModule.forRoot({}),
+    NgeMarkdownModule,
     // myrmidon
     NgToolsModule,
     NgMatToolsModule,
     AuthJwtLoginModule,
     AuthJwtAdminModule,
     // cadmus bricks
-    CadmusRefsDocReferencesModule,
-    CadmusRefsHistoricalDateModule,
-    CadmusRefsLookupModule,
-    CadmusRefsAssertedIdsModule,
+    DocReferencesComponent,
+    HistoricalDateComponent,
+    RefLookupComponent,
+    AssertedIdsComponent,
     // - for preview:
-    CadmusTextBlockViewModule,
+    TextBlockViewComponent,
     // - for gallery:
-    CadmusImgAnnotatorModule,
-    CadmusImgGalleryModule,
+    ImgAnnotatorDirective,
+    GalleryListComponent,
+    GalleryFilterComponent,
+    GalleryImgAnnotatorComponent,
     // cadmus
     CadmusApiModule,
     CadmusCoreModule,

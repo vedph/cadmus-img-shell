@@ -16,22 +16,24 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { CadmusCoreModule } from '@myrmidon/cadmus-core';
-import { CadmusImgAnnotatorModule } from '@myrmidon/cadmus-img-annotator';
-import { CadmusImgGalleryModule } from '@myrmidon/cadmus-img-gallery';
-import { CadmusRefsAssertedChronotopeModule } from '@myrmidon/cadmus-refs-asserted-chronotope';
-import { CadmusRefsAssertedIdsModule } from '@myrmidon/cadmus-refs-asserted-ids';
-import { CadmusRefsAssertionModule } from '@myrmidon/cadmus-refs-assertion';
-import { CadmusRefsDocReferencesModule } from '@myrmidon/cadmus-refs-doc-references';
-import { CadmusRefsHistoricalDateModule } from '@myrmidon/cadmus-refs-historical-date';
+import { ImgAnnotatorDirective } from '@myrmidon/cadmus-img-annotator';
+import {
+  GalleryFilterComponent,
+  GalleryImgAnnotatorComponent,
+  GalleryListComponent,
+} from '@myrmidon/cadmus-img-gallery';
+import { AssertedChronotopeComponent } from '@myrmidon/cadmus-refs-asserted-chronotope';
+import { AssertedIdsComponent } from '@myrmidon/cadmus-refs-asserted-ids';
+import { AssertionComponent } from '@myrmidon/cadmus-refs-assertion';
+import { DocReferencesComponent } from '@myrmidon/cadmus-refs-doc-references';
+import { HistoricalDateComponent } from '@myrmidon/cadmus-refs-historical-date';
 import { CadmusUiModule } from '@myrmidon/cadmus-ui';
 import { CadmusUiPgModule } from '@myrmidon/cadmus-ui-pg';
 import { NgMatToolsModule } from '@myrmidon/ng-mat-tools';
 import { NgToolsModule } from '@myrmidon/ng-tools';
 
-import { GalleryImageAnnotationsPartFeatureComponent } from
-  './gallery-image-annotations-part-feature/gallery-image-annotations-part-feature.component';
-import { GalleryImageAnnotationsPartComponent } from
-  './gallery-image-annotations-part/gallery-image-annotations-part.component';
+import { GalleryImageAnnotationsPartFeatureComponent } from './gallery-image-annotations-part-feature/gallery-image-annotations-part-feature.component';
+import { GalleryImageAnnotationsPartComponent } from './gallery-image-annotations-part/gallery-image-annotations-part.component';
 
 @NgModule({
   declarations: [
@@ -61,13 +63,15 @@ import { GalleryImageAnnotationsPartComponent } from
     CadmusCoreModule,
     CadmusUiModule,
     CadmusUiPgModule,
-    CadmusImgAnnotatorModule,
-    CadmusImgGalleryModule,
-    CadmusRefsAssertedIdsModule,
-    CadmusRefsDocReferencesModule,
-    CadmusRefsHistoricalDateModule,
-    CadmusRefsAssertionModule,
-    CadmusRefsAssertedChronotopeModule,
+    ImgAnnotatorDirective,
+    GalleryFilterComponent,
+    GalleryListComponent,
+    GalleryImgAnnotatorComponent,
+    AssertedIdsComponent,
+    DocReferencesComponent,
+    HistoricalDateComponent,
+    AssertionComponent,
+    AssertedChronotopeComponent,
   ],
   exports: [
     GalleryImageAnnotationsPartComponent,
